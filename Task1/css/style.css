@@ -1,10 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: #31eb49;
-}
-h1 {
-  color: #000;
+  background-color: #1e872b;
+  color: #eee;
   text-align: center;
+  line-height: 1.5;
 }
-p {
-  text-align: center;
+
+ul > li {
+  display: inline-block;
 }
