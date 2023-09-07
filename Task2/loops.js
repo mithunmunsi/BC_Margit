@@ -1,3 +1,4 @@
+"use strict";
 // Loop Assignments (Don’t use arrays)
 
 // 1.  Make a program that prints all positive numbers that are odd and smaller
@@ -26,7 +27,7 @@ console.log(task());
 //     time (h) and calculates average speed. The program ends when user gives
 //     0 for the distance. (After getting 0, the program does not ask anything
 //     from the user.)
-let distance, time;
+/* let distance, time;
 while (distance != 0) {
   let distance = prompt("Enter distance in kilometers");
 
@@ -38,18 +39,27 @@ while (distance != 0) {
   let time = prompt("Enter time in hours");
   let average = distance / time;
   console.log("average is: ", average);
-}
+} */
 
 // While Loop Syntax
 
-while (condition) {}
+/* while (condition) {} */
 
 // Do.. While Loop Syntax
 
-do {} while (condition);
+/* do {} while (condition); */
 
 // 4.  Make a program that asks 20 numbers from user. After that the program
 //     prints out how many of those numbers were even.
+
+let even = 0;
+for (let counting = 0; counting < 5; counting++) {
+  let input = Number(prompt("enter a number"));
+  if (input % 2 == 0) {
+    even++;
+  }
+}
+console.log("There was", even, "even numbers");
 
 // 5.  Make a program that asks numbers from the user, until user gives 0 and
 //     then program ends. In the end program prints out average of the numbers.

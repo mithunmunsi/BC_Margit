@@ -1,3 +1,4 @@
+"use strict";
 //alert("Hellor JavaScript Conditions");
 
 /* if (condition) {
