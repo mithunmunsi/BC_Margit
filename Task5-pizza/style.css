@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pizza__order {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(167, 246, 121);
+
+  padding: 30px;
+}
+.customer__name {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.select__pizza {
+  padding: 5px 30px;
+}
+.pizza__size {
+  width: 300px;
+  margin-left: 30px;
+}
+.pizza__size label {
+  padding: 5px;
+  display: inline-block;
+}
+
+.btn {
+  padding: 15px 25px;
+  border: none;
+  color: #fff;
+  background-color: coral;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.delivery__method {
+  padding: 5px 30px;
+}
+.toppings {
+  padding: 5px 10px;
+}
+.toppings input {
+  display: inline-block;
+  width: 50px;
+}

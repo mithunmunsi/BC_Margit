@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(dicision-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#container {
+  width: 50%;
+  min-height: 50%;
+  backdrop-filter: blur(50px);
+  padding: 50px;
+}
+#question {
+  padding: 15px 30px;
+  width: 100%;
+  background-color: transparent;
+  margin: 10px 0 25px 0;
+  border: none;
+  border-bottom: 2px solid coral;
+  box-shadow: none;
+  font-size: 1.5rem;
+}
+label {
+  font-size: 2rem;
+  text-align: left;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.btn {
+  display: block;
+  padding: 20px 60px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin: 50px 0;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+  background-size: 200% auto;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-position: right center;
+}
+#answer {
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 10px;
+}
