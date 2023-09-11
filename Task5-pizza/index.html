@@ -9,82 +9,80 @@
   <body>
     <div class="pizza__order">
       <h1 style="margin-bottom: 20px">Hello Pizza!</h1>
+      <label for="name">Customer's Name:</label>
       <input
         type="text"
-        placeholder="Customer Name"
+        placeholder="Enter Name"
         id="name"
         class="customer__name"
       />
-      <h3 style="margin-bottom: 15px">Select your pizzaa</h3>
-      <select name="pizza" id="pizza" class="select__pizza">
-        <option value="0">Choose Your Pizza</option>
-        <option value="0">Mexicana</option>
-        <option value="1">Mozzarella</option>
-        <option value="2">Opera</option>
-        <option value="3">Margherita</option>
-        <option value="4">Americana</option>
-        <option value="5">Kebab</option>
-      </select>
-      <h3 style="margin: 25px 0">Size:</h3>
-      <div class="pizza__size">
-        <div>
-          <label for="small">
-            <input type="radio" id="small" class="pizza__size-check" />
-            <span>Small: for one 7,50€</span></label
-          >
-        </div>
-        <div>
-          <label for="medium">
-            <input type="radio" id="medium" class="pizza__size-check" />
-            <span>Medium: for two 10,50€ </span></label
-          >
-        </div>
-        <div>
-          <label for="large">
-            <input type="radio" id="large" class="pizza__size-check" />
-            <span>Large: for family 18.50€</span></label
-          >
-        </div>
-      </div>
-      <div>
-        <h3 style="margin-top: 15px; font-size: 26px">Add Topings</h3>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Pepperoni </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Salaatti </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Tomatti </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Kebabliha </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Ananas </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Valkosipuli </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Chicken </label>
-        </div>
-        <div class="toppings">
-          <label for="item"> <input type="checkbox" />Onion </label>
-        </div>
-      </div>
 
-      <div>
-        <h3 style="margin: 25px 0">Choose Delivery Methods</h3>
-        <select name="" id="delivery" class="delivery__method">
-          <option value="0">Select Delivery Method</option>
-          <option value="0">Eat In</option>
-          <option value="0">Take Away</option>
-          <option value="0">Door Delivery</option>
-        </select>
-      </div>
+      <form id="pizza-form">
+        <h2>Select Toppings</h2>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="pepperoni" /> Pepperoni
+        </label>
 
-      <button class="btn" id="button">Place Order</button>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="sausage" /> Sausage
+        </label>
+
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="mushrooms" /> Mushrooms
+        </label>
+
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Olives
+        </label>
+
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Kebabliha
+        </label>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Chicken
+        </label>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Kinkku
+        </label>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Salami
+        </label>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Katkarapu
+        </label>
+        <label class="form__label">
+          <input type="checkbox" name="topping" value="olives" /> Ananas
+        </label>
+
+        <h2>Select Size</h2>
+        <label class="form__label">
+          <input type="radio" name="size" value="small" checked /> Small
+          (+€8.00)
+        </label>
+
+        <label class="form__label">
+          <input type="radio" name="size" value="medium" /> Medium (+€10.00)
+        </label>
+
+        <label class="form__label">
+          <input type="radio" name="size" value="large" /> Large (+€12.00)
+        </label>
+
+        <div>
+          <h3 style="margin: 25px 0">Choose Delivery Methods</h3>
+          <select id="delivery" class="delivery__method">
+            <option value="0">Select Delivery Method</option>
+            <option value="eatIn">Eat In</option>
+            <option value="pickup">Take Away</option>
+            <option value="doorD">Door Delivery +5€</option>
+          </select>
+        </div>
+
+        <h2>Total Cost: €<span id="total-cost">0.00</span></h2>
+        <button type="button" class="btn" onclick="calculateTotal()">
+          Calculate Total
+        </button>
+      </form>
     </div>
     <script src="main.js"></script>
   </body>
