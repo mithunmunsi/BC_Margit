@@ -11,11 +11,11 @@ function calculateTotal() {
     switch (topping.value) {
       case 'pepperoni':
       case 'sausage':
-        total += 2.0;
+        total += 0.0;
         break;
       case 'mushrooms':
       case 'olives':
-        total += 1.5;
+        total += 0.0;
         break;
     }
   });

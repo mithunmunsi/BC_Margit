@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(39, 42, 223, 0.668),
+    rgba(229, 135, 35, 0.744)
+  );
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.colors {
+  margin: 25px 0;
+}
+.color-form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.directions-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.directions {
+  width: 100px;
+  background-color: coral;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
