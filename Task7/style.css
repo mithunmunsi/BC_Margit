@@ -11,18 +11,22 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
 }
+h2 {
+  margin: 20px 0;
+}
 section {
   scroll-margin-top: 60px;
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: sticky;
   top: 0;
+  padding: 20px 0;
+  background-color: #fcec83;
 }
 .header-bg {
-  background-color: #fff;
-  height: 60px;
+  background-color: #ffffff;
 }
 
 ul {
@@ -31,9 +35,22 @@ ul {
 li {
   display: inline-block;
   padding: 10px;
+  width: 100px;
+  text-align: center;
 }
 a {
   text-decoration: none;
+}
+li:hover {
+  background-color: coral;
+  color: #fff;
+  transition: 0.5s ease-in;
+}
+
+main {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: justify;
 }
 .btn {
   border: none;
