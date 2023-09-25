@@ -3,6 +3,11 @@ const mobButton = document.querySelector('.mobile');
 const nav = document.querySelector('nav ul');
 const menuItems = document.querySelectorAll('nav ul li a');
 const header = document.querySelector('header');
+/* Modal Window JavaScript */
+const modalButton = document.querySelector('#modalButton');
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('#close');
+
 // Browser onscroll event triger
 window.onscroll = function () {
   scrollFunction();
@@ -41,5 +46,12 @@ const mobMenu = () => {
   }
 };
 
+const modalShow = () => {
+  overlay.classList.toggle('visible');
+};
+
+/* Triggers to control functions */
 backButton.addEventListener('click', getTotop);
 mobButton.addEventListener('click', mobMenu);
+modalButton.addEventListener('click', modalShow);
+closeButton.addEventListener('click', modalShow);
