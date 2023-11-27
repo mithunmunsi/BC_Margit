@@ -1,51 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-image: url(pizza-bg.jpg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-image: url(bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 18px;
+  color: #ffffff;
+  width: 40vw;
+  position: absolute;
+  left: 85%;
+  top: 44%;
+  transform: translate(-66%, -30%);
+  margin-top: 20px;
 }
 h2 {
-  margin: 15px 0;
+  font-size: 20px;
 }
-.pizza__order {
-  width: 600px;
-  margin: 0 auto;
-  background-color: rgb(167, 246, 121);
-  padding: 30px;
+.nameField label {
+  display: inline-block;
+  width: 100px;
+  color: green;
+  font-size: 20px;
 }
-.customer__name {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-}
-
-.form__label {
-  display: block;
-  padding: 5px;
-}
-.btn {
-  padding: 15px 25px;
-  border: none;
-  color: #fff;
-  background-color: coral;
-  border-radius: 5px;
-  margin-top: 25px;
-  cursor: pointer;
+.nameField input {
+  padding: 5px 20px;
+  color: green;
+  font-size: 20px;
+  border: 3px solid green;
 }
 
-.btn:hover {
-  background-color: rgb(228, 102, 56);
+.nameField input::placeholder {
+  color: coral;
 }
-.delivery__method {
-  padding: 5px 30px;
+.sizeField {
+  margin: 5px;
 }
 .toppings {
-  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  justify-content: space-between;
+  margin: 10px 0;
 }
-.toppings input {
-  display: inline-block;
-  width: 50px;
+.toppings div {
+  padding: 5px;
+}
+
+#deliveryOptions {
+  padding: 0 20px;
+}
+.price {
+  margin-top: 10px;
+  font-size: 20px;
+}
+#submit {
+  padding: 10px 20px;
+  background-color: coral;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #ffffff;
 }

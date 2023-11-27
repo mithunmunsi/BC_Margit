@@ -1,52 +1,65 @@
-'use strict';
+// Step#1 Getting elements from document
 const name = document.querySelector('#name').value;
+const form = document.querySelector('form');
+const toppings = document.querySelectorAll('input[name="topping"]');
+const sizes = document.querySelectorAll('input[name="size"]');
+const delivery = document.querySelector('#delivery');
+const price = document.querySelector('#price');
+const submitButton = document.querySelector('#submit');
 
+// Step#2 Making function for Calculating total price
 function calculateTotal() {
-  const toppings = document.querySelectorAll('input[name="topping"]:checked');
-  const size = document.querySelector('input[name="size"]:checked');
-  const delivery = document.querySelector('#delivery');
   let total = 0;
+  let selectedToppings = [];
 
-  toppings.forEach((topping) => {
-    switch (topping.value) {
-      case 'pepperoni':
-      case 'sausage':
-        total += 0.0;
-        break;
-      case 'mushrooms':
-      case 'olives':
-        total += 0.0;
-        break;
+  for (const size of sizes) {
+    if (size.checked) {
+      switch (size.value) {
+        case 'small':
+          total += 7.5;
+          break;
+        case 'medium':
+          total += 10.5;
+          break;
+        case 'large':
+          total += 12.5;
+          break;
+        case 'x-large':
+          total += 15.5;
+          break;
+      }
     }
-  });
+  }
 
-  if (size) {
-    switch (size.value) {
-      case 'medium':
-        total += 10.0;
-        break;
-      case 'large':
-        total += 12.0;
-        break;
-      default:
-        total += 8.0;
+  for (const topping of toppings) {
+    if (topping.checked) {
+      selectedToppings.push(topping.value);
     }
+  }
+
+  if (selectedToppings.length > 4) {
+    total += (selectedToppings.length - 4) * 0.5;
   }
   if (delivery) {
     switch (delivery.value) {
-      case 'eatIn':
-        total += 0;
-        break;
-      case 'pickup':
-        total += 0;
-        break;
-      case 'doorD':
+      case 'doorDash':
         total += 5.0;
         break;
       default:
-        total += 8.0;
+        total += 0.0;
     }
   }
 
-  document.getElementById('total-cost').textContent = total.toFixed(2);
+  price.textContent = `${total}€`;
 }
+
+// Checking whether size is selected or not
+function checkedSize() {
+  const selectedSize = document.querySelectorAll('[name="size"]:checked');
+  if (selectedSize.length <= 0) {
+    window.alert('Hello Sir! Please choose the pizza size! ☺️ ');
+  }
+}
+// Step#3 Trigger the functions
+form.addEventListener('input', calculateTotal);
+submitButton.addEventListener('click', checkedSize);
